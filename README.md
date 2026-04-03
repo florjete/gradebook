@@ -54,22 +54,31 @@ python main.py add-student --name "John Doe"
 # Add a course
 python main.py add-course --code CS101 --title "Intro to CS"
 # Output: Added course CS101 - Intro to CS
+python main.py add-course --code OS101 --title "Intro to Operating Systems"
+# Output: Added course OS101 - Intro to Operating Systems
+
 
 # Enroll a student
 python main.py enroll --student-id 1 --course CS101
 # Output: Student 1 enrolled in course CS101
+python main.py enroll --student-id 1 --course OS101
+# Output: Student 1 enrolled in course OS101
 
 # Add a grade
 python main.py add-grade --student-id 1 --course CS101 --grade 95
 # Output: Added grade 95 for student 1 in course CS101
+python main.py add-grade --student-id 1 --course CS101 --grade 65
+# Output: Added grade 65 for student 1 in course CS101
+python main.py add-grade --student-id 1 --course CS101 --grade 83
+# Output: Added grade 83 for student 1 in course OS101
 
 # Compute course average
 python main.py avg --student-id 1 --course CS101
-# Output: Average grade for student 1 in CS101: 95.0
+# Output: Average grade for student 1 in CS101: 80.0
 
 # Compute GPA
 python main.py gpa --student-id 1
-# Output: GPA for student 1: 95.0
+# Output: GPA for student 1: 81.0
 
 # List data
 python main.py list students
@@ -102,7 +111,12 @@ python scripts/seed.py
 ```
 
 ---
+## Sample Logs
 
+Example of application logs:
+<img width="1093" height="208" alt="image" src="https://github.com/user-attachments/assets/b941433b-2dd7-4d7a-acac-7109a82f24c5" />
+
+---
 ## Design Decisions & Limitations
 
 - JSON is used for storage instead of a database for simplicity.
