@@ -10,6 +10,7 @@ A simple command-line application in Python for managing students, courses, enro
 - [Usage](#usage)
 - [Commands](#commands)
 - [Sample Data](#sample-data)
+- [Sample Logs](#sample-logs)
 - [Design Decisions & Limitations](#design-decisions--limitations)
 - [Tests](#tests)
 
