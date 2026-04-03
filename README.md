@@ -42,24 +42,34 @@ Run the CLI by executing `main.py` with the desired command:
 
 ```bash
 python main.py <command> [options]
+```
 
+### Examples
+
+```bash
 # Add a student
 python main.py add-student --name "John Doe"
+# Output: Added student John Doe with ID 1
 
 # Add a course
 python main.py add-course --code CS101 --title "Intro to CS"
+# Output: Added course CS101 - Intro to CS
 
 # Enroll a student
 python main.py enroll --student-id 1 --course CS101
+# Output: Student 1 enrolled in course CS101
 
 # Add a grade
 python main.py add-grade --student-id 1 --course CS101 --grade 95
+# Output: Added grade 95 for student 1 in course CS101
 
 # Compute course average
 python main.py avg --student-id 1 --course CS101
+# Output: Average grade for student 1 in CS101: 95.0
 
 # Compute GPA
 python main.py gpa --student-id 1
+# Output: GPA for student 1: 95.0
 
 # List data
 python main.py list students
