@@ -1,4 +1,8 @@
-"""Handles loading and saving gradebook data using JSON."""
+"""Module for loading and saving gradebook data using JSON files.
+
+Provides functions to persist and retrieve students, courses, and enrollments.
+Handles missing or corrupted files and logs operations to `logs/app.log`.
+"""
 
 import json
 import logging
@@ -17,8 +21,15 @@ logging.basicConfig(
 
 def load_data():
     """
-    Load data from JSON file.
-    Returns a dictionary with students, courses, and enrollments.
+    Load gradebook data from the JSON file.
+
+    Returns:
+        dict: Dictionary containing keys 'students', 'courses', 'enrollments'.
+
+    Notes:
+        - If the file does not exist, returns empty data.
+        - If the JSON is corrupted, prints a warning and returns empty data.
+        - Any unexpected exception is logged and empty data is returned.
     """
     EMPTY_DATA = {
         "students": [],
@@ -48,7 +59,14 @@ def load_data():
 
 def save_data(data):
     """
-    Save data to JSON file.
+    Save gradebook data to the JSON file.
+
+    Args:
+        data (dict): Dictionary containing 'students', 'courses', and 'enrollments' to save.
+
+    Notes:
+        - Creates the data directory if it does not exist.
+        - Logs success or any exceptions encountered.
     """
     try:
         # Ensure directory exists

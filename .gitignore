@@ -1,2 +1,9 @@
-#Virtual enviroment
+# Python
+__pycache__/
+*.pyc
 venv/
+data/
+logs/
+
+# IDE settings
+.vscode/

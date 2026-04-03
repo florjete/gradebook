@@ -3,6 +3,15 @@ from gradebook import service
 
 
 def main():
+    """
+    Parse CLI arguments and execute the corresponding gradebook service functions.
+
+    Handles:
+        - add-student: Adds a new student.
+        - add-grade: Adds a grade for an existing student in a course.
+
+    Errors are caught and printed to the console.
+    """
     parser = argparse.ArgumentParser()
     sub = parser.add_subparsers(dest="command")
 
